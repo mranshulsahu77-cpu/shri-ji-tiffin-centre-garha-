@@ -1,0 +1,2387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f2b">
+  <meta name="description" content="Shri Ji Tiffin Centre offers pure vegetarian homemade tiffin and home delivery in Garha, Jabalpur, Madhya Pradesh.">
+  <title>Shri Ji Tiffin Centre | Homemade Veg Tiffin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #173f2b;
+      --green-light: #24583b;
+      --cream: #fbf8ef;
+      --gold: #d99b35;
+      --text: #26352b;
+      --muted: #69756c;
+      --white: #ffffff;
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .announcement {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+    }
+
+    header {
+      background: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e8e5da;
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .brand-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+    }
+
+    .brand-name {
+      line-height: 1.2;
+    }
+
+    .brand-name small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--green-light);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: none;
+      border-radius: 100px;
+      padding: 14px 23px;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-light);
+    }
+
+    .btn-outline {
+      border: 1px solid #c9d0c6;
+      color: var(--green);
+      background: transparent;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 27px;
+      color: var(--green);
+    }
+
+    .hero {
+      padding: 76px 0 84px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green-light);
+      background: #e8eddf;
+      padding: 8px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.15;
+    }
+
+    h1 {
+      color: var(--green);
+      font-size: clamp(42px, 5.5vw, 68px);
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 510px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 48% 48% 22px 22px;
+      box-shadow: 0 24px 60px #173f2b1a;
+    }
+
+    .price-bubble {
+      position: absolute;
+      bottom: 24px;
+      left: -25px;
+      background: white;
+      border-radius: 18px;
+      padding: 18px 23px;
+      box-shadow: 0 12px 35px #173f2b20;
+    }
+
+    .price-bubble small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .price-bubble strong {
+      font-size: 27px;
+      color: var(--green);
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .menu-section {
+      background: #f1eee4;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 30px #173f2b08;
+      transition: transform .2s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .menu-card-content {
+      padding: 24px;
+    }
+
+    .menu-card h3 {
+      color: var(--green);
+      font-size: 23px;
+      margin-bottom: 9px;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .menu-card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 21px;
+    }
+
+    .small-order {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 25px 18px;
+    }
+
+    .feature-icon {
+      width: 65px;
+      height: 65px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      background: #e8eddf;
+      border-radius: 50%;
+      font-size: 28px;
+    }
+
+    .feature h3 {
+      color: var(--green);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .order-section {
+      background: var(--green);
+      color: white;
+      text-align: center;
+    }
+
+    .order-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 18px;
+    }
+
+    .order-section p {
+      color: #d9e5d9;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .order-section .btn {
+      background: white;
+      color: var(--green);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .contact-info h2 {
+      font-size: 42px;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-detail {
+      margin: 15px 0;
+      font-weight: 600;
+    }
+
+    .contact-image img {
+      height: 350px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    footer {
+      background: #102f20;
+      color: white;
+      padding: 30px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p {
+      color: #c4d2c6;
+      font-size: 13px;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 15px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-image {
+        max-width: 550px;
+        margin: auto;
+      }
+
+      .hero-image img {
+        height: 380px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-image {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        border-bottom: 1px solid #e8e5da;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav .btn {
+        width: 100%;
+      }
+
+      .hero-image img {
+        height: 310px;
+      }
+
+      .price-bubble {
+        left: 10px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-card img {
+        height: 230px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .feature {
+        padding: 20px 10px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Pure Veg Homemade Tiffin · Garha, Jabalpur
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Shri Ji Tiffin Centre home">
+        <span class="brand-icon">🍃</span>
+        <span class="brand-name">
+          Shri Ji Tiffin Centre
+          <small>PURE VEG · HOMEMADE</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary whatsapp-link" href="#">Order on WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">100% Pure Vegetarian</span>
+          <h1>Ghar Jaisa Khana,<br>Apno Jaisa Swaad.</h1>
+          <p>
+            Enjoy comforting homemade vegetarian meals with
+            convenient tiffin delivery in Garha, Jabalpur.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary whatsapp-link" href="#">Order Your Tiffin ↗</a>
+            <a class="btn btn-outline" href="#menu">Explore Menu</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=85"
+            alt="Indian vegetarian meal served in a traditional thali"
+          >
+          <div class="price-bubble">
+            <small>Regular Veg Tiffin</small>
+            <strong>₹70*</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Menu</span>
+          <h2>Simple Food. Beautiful Flavours.</h2>
+          <p>Discover our homemade vegetarian meal options.</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+              alt="Homemade Indian vegetarian meal"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Regular Veg Tiffin</h3>
+              <p>A comforting homemade vegetarian meal. Ask us about today's menu.</p>
+              <div class="menu-card-bottom">
+                <span class="price">₹70*</span>
+                <a class="small-order whatsapp-link" href="#">Order ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85"
+              alt="Indian restaurant dining"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Dal & Sabzi</h3>
+              <p>Ask about the available dal and seasonal vegetable options.</p>
+              <div class="menu-card-bottom">
+                <span class="price">Ask for price</span>
+                <a class="small-order whatsapp-link" href="#">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=85"
+              alt="Indian vegetarian curry and rice"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Special Veg Thali</h3>
+              <p>Contact us to learn about today's special meal and pricing.</p>
+              <div class="menu-card-bottom">
+                <span class="price">Ask for price</span>
+                <a class="small-order whatsapp-link" href="#">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="disclaimer">
+          *₹70 is an estimated price and must be confirmed with the business.
+          Menu items and availability may vary.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Why Shri Ji</span>
+          <h2>Homemade Meals, Made Convenient</h2>
+          <p>
+            We make it easier to enjoy familiar vegetarian food
+            with convenient tiffin ordering and home delivery.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🌿</div>
+            <h3>Pure Veg</h3>
+            <p>Vegetarian meals for your everyday dining.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🏡</div>
+            <h3>Homemade</h3>
+            <p>Comforting food inspired by home cooking.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🛵</div>
+            <h3>Home Delivery</h3>
+            <p>Convenient delivery in our service area.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💬</div>
+            <h3>Easy Ordering</h3>
+            <p>Contact us directly through WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="container">
+        <span class="eyebrow">Ready to Order?</span>
+        <h2>Your Next Meal Is Just a Message Away.</h2>
+        <p>
+          Contact Shri Ji Tiffin Centre to check today's menu,
+          confirm the price and arrange your delivery.
+        </p>
+        <a class="btn whatsapp-link" href="#">Order on WhatsApp ↗</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>We'd Love to Serve You.</h2>
+          <p>Contact us for menu details, orders and delivery information.</p>
+          <div class="contact-detail">📍 Garha, Jabalpur, Madhya Pradesh</div>
+          <div class="contact-detail">🥗 100% Pure Vegetarian</div>
+          <a class="btn btn-primary whatsapp-link" href="#">Message Us on WhatsApp</a>
+        </div>
+        <div class="contact-image">
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+            alt="Freshly prepared Indian food"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <div class="footer-brand">Shri Ji Tiffin Centre</div>
+        <p>Pure Veg Homemade Tiffin · Garha, Jabalpur</p>
+      </div>
+      <p>© <span id="year"></span> Shri Ji Tiffin Centre</p>
+    </div>
+  </footer>
+
+  <script>
+    // SETUP: Replace this with the business WhatsApp number.
+    // Use country code + number, digits only. Example format: 91XXXXXXXXXX
+    const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+    const defaultMessage =
+      "Namaste Shri Ji Tiffin Centre! I would like to enquire about your tiffin menu and delivery.";
+
+    document.querySelectorAll(".whatsapp-link").forEach((link) => {
+      const message = link.dataset.message || defaultMessage;
+      link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+
+    document.querySelectorAll(".menu-card .whatsapp-link").forEach((link) => {
+      const item = link.closest(".menu-card").querySelector("h3").textContent;
+      const message = `Namaste! I would like to order or enquire about ${item}.`;
+      link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f2b">
+  <meta name="description" content="Shri Ji Tiffin Centre offers pure vegetarian homemade tiffin and home delivery in Garha, Jabalpur, Madhya Pradesh.">
+  <title>Shri Ji Tiffin Centre | Homemade Veg Tiffin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #173f2b;
+      --green-light: #24583b;
+      --cream: #fbf8ef;
+      --gold: #d99b35;
+      --text: #26352b;
+      --muted: #69756c;
+      --white: #ffffff;
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .announcement {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+    }
+
+    header {
+      background: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e8e5da;
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .brand-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+    }
+
+    .brand-name {
+      line-height: 1.2;
+    }
+
+    .brand-name small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--green-light);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: none;
+      border-radius: 100px;
+      padding: 14px 23px;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-light);
+    }
+
+    .btn-outline {
+      border: 1px solid #c9d0c6;
+      color: var(--green);
+      background: transparent;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 27px;
+      color: var(--green);
+    }
+
+    .hero {
+      padding: 76px 0 84px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green-light);
+      background: #e8eddf;
+      padding: 8px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.15;
+    }
+
+    h1 {
+      color: var(--green);
+      font-size: clamp(42px, 5.5vw, 68px);
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 510px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 48% 48% 22px 22px;
+      box-shadow: 0 24px 60px #173f2b1a;
+    }
+
+    .price-bubble {
+      position: absolute;
+      bottom: 24px;
+      left: -25px;
+      background: white;
+      border-radius: 18px;
+      padding: 18px 23px;
+      box-shadow: 0 12px 35px #173f2b20;
+    }
+
+    .price-bubble small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .price-bubble strong {
+      font-size: 27px;
+      color: var(--green);
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .menu-section {
+      background: #f1eee4;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 30px #173f2b08;
+      transition: transform .2s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .menu-card-content {
+      padding: 24px;
+    }
+
+    .menu-card h3 {
+      color: var(--green);
+      font-size: 23px;
+      margin-bottom: 9px;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .menu-card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 21px;
+    }
+
+    .small-order {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 25px 18px;
+    }
+
+    .feature-icon {
+      width: 65px;
+      height: 65px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      background: #e8eddf;
+      border-radius: 50%;
+      font-size: 28px;
+    }
+
+    .feature h3 {
+      color: var(--green);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .order-section {
+      background: var(--green);
+      color: white;
+      text-align: center;
+    }
+
+    .order-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 18px;
+    }
+
+    .order-section p {
+      color: #d9e5d9;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .order-section .btn {
+      background: white;
+      color: var(--green);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .contact-info h2 {
+      font-size: 42px;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-detail {
+      margin: 15px 0;
+      font-weight: 600;
+    }
+
+    .contact-image img {
+      height: 350px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    footer {
+      background: #102f20;
+      color: white;
+      padding: 30px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p {
+      color: #c4d2c6;
+      font-size: 13px;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 15px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-image {
+        max-width: 550px;
+        margin: auto;
+      }
+
+      .hero-image img {
+        height: 380px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-image {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        border-bottom: 1px solid #e8e5da;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav .btn {
+        width: 100%;
+      }
+
+      .hero-image img {
+        height: 310px;
+      }
+
+      .price-bubble {
+        left: 10px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-card img {
+        height: 230px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .feature {
+        padding: 20px 10px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Pure Veg Homemade Tiffin · Garha, Jabalpur
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Shri Ji Tiffin Centre home">
+        <span class="brand-icon">🍃</span>
+        <span class="brand-name">
+          Shri Ji Tiffin Centre
+          <small>PURE VEG · HOMEMADE</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary whatsapp-link" href="#">Order on WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">100% Pure Vegetarian</span>
+          <h1>Ghar Jaisa Khana,<br>Apno Jaisa Swaad.</h1>
+          <p>
+            Enjoy comforting homemade vegetarian meals with
+            convenient tiffin delivery in Garha, Jabalpur.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary whatsapp-link" href="#">Order Your Tiffin ↗</a>
+            <a class="btn btn-outline" href="#menu">Explore Menu</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=85"
+            alt="Indian vegetarian meal served in a traditional thali"
+          >
+          <div class="price-bubble">
+            <small>Regular Veg Tiffin</small>
+            <strong>₹70*</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Menu</span>
+          <h2>Simple Food. Beautiful Flavours.</h2>
+          <p>Discover our homemade vegetarian meal options.</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+              alt="Homemade Indian vegetarian meal"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Regular Veg Tiffin</h3>
+              <p>A comforting homemade vegetarian meal. Ask us about today's menu.</p>
+              <div class="menu-card-bottom">
+                <span class="price">₹70*</span>
+                <a class="small-order whatsapp-link" href="#">Order ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85"
+              alt="Indian restaurant dining"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Dal & Sabzi</h3>
+              <p>Ask about the available dal and seasonal vegetable options.</p>
+              <div class="menu-card-bottom">
+                <span class="price">Ask for price</span>
+                <a class="small-order whatsapp-link" href="#">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=85"
+              alt="Indian vegetarian curry and rice"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Special Veg Thali</h3>
+              <p>Contact us to learn about today's special meal and pricing.</p>
+              <div class="menu-card-bottom">
+                <span class="price">Ask for price</span>
+                <a class="small-order whatsapp-link" href="#">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="disclaimer">
+          *₹70 is an estimated price and must be confirmed with the business.
+          Menu items and availability may vary.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Why Shri Ji</span>
+          <h2>Homemade Meals, Made Convenient</h2>
+          <p>
+            We make it easier to enjoy familiar vegetarian food
+            with convenient tiffin ordering and home delivery.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🌿</div>
+            <h3>Pure Veg</h3>
+            <p>Vegetarian meals for your everyday dining.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🏡</div>
+            <h3>Homemade</h3>
+            <p>Comforting food inspired by home cooking.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🛵</div>
+            <h3>Home Delivery</h3>
+            <p>Convenient delivery in our service area.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💬</div>
+            <h3>Easy Ordering</h3>
+            <p>Contact us directly through WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="container">
+        <span class="eyebrow">Ready to Order?</span>
+        <h2>Your Next Meal Is Just a Message Away.</h2>
+        <p>
+          Contact Shri Ji Tiffin Centre to check today's menu,
+          confirm the price and arrange your delivery.
+        </p>
+        <a class="btn whatsapp-link" href="#">Order on WhatsApp ↗</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>We'd Love to Serve You.</h2>
+          <p>Contact us for menu details, orders and delivery information.</p>
+          <div class="contact-detail">📍 Garha, Jabalpur, Madhya Pradesh</div>
+          <div class="contact-detail">🥗 100% Pure Vegetarian</div>
+          <a class="btn btn-primary whatsapp-link" href="#">Message Us on WhatsApp</a>
+        </div>
+        <div class="contact-image">
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+            alt="Freshly prepared Indian food"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <div class="footer-brand">Shri Ji Tiffin Centre</div>
+        <p>Pure Veg Homemade Tiffin · Garha, Jabalpur</p>
+      </div>
+      <p>© <span id="year"></span> Shri Ji Tiffin Centre</p>
+    </div>
+  </footer>
+
+  <script>
+    // SETUP: Replace this with the business WhatsApp number.
+    // Use country code + number, digits only. Example format: 91XXXXXXXXXX
+    const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+    const defaultMessage =
+      "Namaste Shri Ji Tiffin Centre! I would like to enquire about your tiffin menu and delivery.";
+
+    document.querySelectorAll(".whatsapp-link").forEach((link) => {
+      const message = link.dataset.message || defaultMessage;
+      link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+
+    document.querySelectorAll(".menu-card .whatsapp-link").forEach((link) => {
+      const item = link.closest(".menu-card").querySelector("h3").textContent;
+      const message = `Namaste! I would like to order or enquire about ${item}.`;
+      link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuToggle.setAttribute("
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f2b">
+  <meta name="description" content="Shri Ji Tiffin Centre offers pure vegetarian homemade tiffin and home delivery in Garha, Jabalpur, Madhya Pradesh.">
+  <title>Shri Ji Tiffin Centre | Homemade Veg Tiffin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #173f2b;
+      --green-light: #24583b;
+      --cream: #fbf8ef;
+      --gold: #d99b35;
+      --text: #26352b;
+      --muted: #69756c;
+      --white: #ffffff;
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .announcement {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 13px;
+    }
+
+    header {
+      background: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e8e5da;
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .brand-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+    }
+
+    .brand-name {
+      line-height: 1.2;
+    }
+
+    .brand-name small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--green-light);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: none;
+      border-radius: 100px;
+      padding: 14px 23px;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-light);
+    }
+
+    .btn-outline {
+      border: 1px solid #c9d0c6;
+      color: var(--green);
+      background: transparent;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 27px;
+      color: var(--green);
+    }
+
+    .hero {
+      padding: 76px 0 84px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green-light);
+      background: #e8eddf;
+      padding: 8px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.15;
+    }
+
+    h1 {
+      color: var(--green);
+      font-size: clamp(42px, 5.5vw, 68px);
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 510px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 48% 48% 22px 22px;
+      box-shadow: 0 24px 60px #173f2b1a;
+    }
+
+    .price-bubble {
+      position: absolute;
+      bottom: 24px;
+      left: -25px;
+      background: white;
+      border-radius: 18px;
+      padding: 18px 23px;
+      box-shadow: 0 12px 35px #173f2b20;
+    }
+
+    .price-bubble small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .price-bubble strong {
+      font-size: 27px;
+      color: var(--green);
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .menu-section {
+      background: #f1eee4;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 30px #173f2b08;
+      transition: transform .2s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .menu-card-content {
+      padding: 24px;
+    }
+
+    .menu-card h3 {
+      color: var(--green);
+      font-size: 23px;
+      margin-bottom: 9px;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .menu-card-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 21px;
+    }
+
+    .small-order {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 25px 18px;
+    }
+
+    .feature-icon {
+      width: 65px;
+      height: 65px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      background: #e8eddf;
+      border-radius: 50%;
+      font-size: 28px;
+    }
+
+    .feature h3 {
+      color: var(--green);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .order-section {
+      background: var(--green);
+      color: white;
+      text-align: center;
+    }
+
+    .order-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 18px;
+    }
+
+    .order-section p {
+      color: #d9e5d9;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .order-section .btn {
+      background: white;
+      color: var(--green);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .contact-info h2 {
+      font-size: 42px;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-detail {
+      margin: 15px 0;
+      font-weight: 600;
+    }
+
+    .contact-image img {
+      height: 350px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    footer {
+      background: #102f20;
+      color: white;
+      padding: 30px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer p {
+      color: #c4d2c6;
+      font-size: 13px;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 15px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-image {
+        max-width: 550px;
+        margin: auto;
+      }
+
+      .hero-image img {
+        height: 380px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-image {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        border-bottom: 1px solid #e8e5da;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav .btn {
+        width: 100%;
+      }
+
+      .hero-image img {
+        height: 310px;
+      }
+
+      .price-bubble {
+        left: 10px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-card img {
+        height: 230px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .feature {
+        padding: 20px 10px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Pure Veg Homemade Tiffin · Garha, Jabalpur
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Shri Ji Tiffin Centre home">
+        <span class="brand-icon">🍃</span>
+        <span class="brand-name">
+          Shri Ji Tiffin Centre
+          <small>PURE VEG · HOMEMADE</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary whatsapp-link" href="#">Order on WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">100% Pure Vegetarian</span>
+          <h1>Ghar Jaisa Khana,<br>Apno Jaisa Swaad.</h1>
+          <p>
+            Enjoy comforting homemade vegetarian meals with
+            convenient tiffin delivery in Garha, Jabalpur.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary whatsapp-link" href="#">Order Your Tiffin ↗</a>
+            <a class="btn btn-outline" href="#menu">Explore Menu</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=85"
+            alt="Indian vegetarian meal served in a traditional thali"
+          >
+          <div class="price-bubble">
+            <small>Regular Veg Tiffin</small>
+            <strong>₹70*</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Menu</span>
+          <h2>Simple Food. Beautiful Flavours.</h2>
+          <p>Discover our homemade vegetarian meal options.</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+              alt="Homemade Indian vegetarian meal"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Regular Veg Tiffin</h3>
+              <p>A comforting homemade vegetarian meal. Ask us about today's menu.</p>
+              <div class="menu-card-bottom">
+                <span class="price">₹70*</span>
+                <a class="small-order whatsapp-link" href="#">Order ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85"
+              alt="Indian restaurant dining"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Dal & Sabzi</h3>
+              <p>Ask about the available dal and seasonal vegetable options.</p>
+              <div class="menu-card-bottom">
+                <span class="price">Ask for price</span>
+                <a class="small-order whatsapp-link" href="#">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <img
+              src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=85"
+              alt="Indian vegetarian curry and rice"
+              loading="lazy"
+            >
+            <div class="menu-card-content">
+              <h3>Special Veg Thali</h3>
+              <p>Contact us to learn about today's special meal and pricing.</p>
+              <div class="menu-card-bottom">
+                <span class="price">Ask for price</span>
+                <a class="small-order whatsapp-link" href="#">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="disclaimer">
+          *₹70 is an estimated price and must be confirmed with the business.
+          Menu items and availability may vary.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Why Shri Ji</span>
+          <h2>Homemade Meals, Made Convenient</h2>
+          <p>
+            We make it easier to enjoy familiar vegetarian food
+            with convenient tiffin ordering and home delivery.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🌿</div>
+            <h3>Pure Veg</h3>
+            <p>Vegetarian meals for your everyday dining.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🏡</div>
+            <h3>Homemade</h3>
+            <p>Comforting food inspired by home cooking.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🛵</div>
+            <h3>Home Delivery</h3>
+            <p>Convenient delivery in our service area.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💬</div>
+            <h3>Easy Ordering</h3>
+            <p>Contact us directly through WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="container">
+        <span class="eyebrow">Ready to Order?</span>
+        <h2>Your Next Meal Is Just a Message Away.</h2>
+        <p>
+          Contact Shri Ji Tiffin Centre to check today's menu,
+          confirm the price and arrange your delivery.
+        </p>
+        <a class="btn whatsapp-link" href="#">Order on WhatsApp ↗</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>We'd Love to Serve You.</h2>
+          <p>Contact us for menu details, orders and delivery information.</p>
+          <div class="contact-detail">📍 Garha, Jabalpur, Madhya Pradesh</div>
+          <div class="contact-detail">🥗 100% Pure Vegetarian</div>
+          <a class="btn btn-primary whatsapp-link" href="#">Message Us on WhatsApp</a>
+        </div>
+        <div class="contact-image">
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+            alt="Freshly prepared Indian food"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <div class="footer-brand">Shri Ji Tiffin Centre</div>
+        <p>Pure Veg Homemade Tiffin · Garha, Jabalpur</p>
+      </div>
+      <p>© <span id="year"></span> Shri Ji Tiffin Centre</p>
+    </div>
+  </footer>
+
+  <script>
+    // SETUP: Replace this with the business WhatsApp number.
+    // Use country code + number, digits only. Example format: 91XXXXXXXXXX
+    const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+    const defaultMessage =
+      "Namaste Shri Ji Tiffin Centre! I would like to enquire about your tiffin menu and delivery.";
+
+    document.querySelectorAll(".whatsapp-link").forEach((link) => {
+      const message = link.dataset.message || defaultMessage;
+      link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+
+    document.querySelectorAll(".menu-card .whatsapp-link").forEach((link) => {
+      const item = link.closest(".menu-card").querySelector("h3").textContent;
+      const message = `Namaste! I would like to order or enquire about ${item}.`;
+      link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    });
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
